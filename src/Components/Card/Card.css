@@ -1,0 +1,15 @@
+.box {
+    min-height: 40px;
+    max-width: 45px;
+    background-color: brown;
+    margin: 5px;
+    transition: background-color 1s;
+}
+
+.inactive {
+    background-color: #7c8798;
+}
+
+.active {
+    background-color: #fb7413;
+}
