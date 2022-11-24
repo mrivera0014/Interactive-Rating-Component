@@ -19,10 +19,23 @@ export default function Card() {
             return "box inactive"
         }
     }
+
+    function switchVisible() {
+        if (document.getElementById('rating')) {
+            if (document.getElementById('rating').style.display == 'none') {
+                document.getElementById('rating').style.display = 'block';
+                document.getElementById('thankYou').style.display = 'none';
+            }
+            else {
+                document.getElementById('rating').style.display = 'none';
+                document.getElementById('thankYou').style.display = 'block';
+            }
+        }
+    }
     return (
 
         <div>
-            <form>
+            <form id='rating'>
                 <h6>How did we do?</h6>
                 <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
                 {ratingState.objects.map((elements, index) => (
@@ -38,8 +51,12 @@ export default function Card() {
                     <input name='rating' type='radio' />5
                 </div> */}
 
-                <button type='submit'>Submit</button>
+                <button type='submit' onClick={switchVisible()}>Submit</button>
             </form>
+
+            <main id='thankYou'>
+                Thank You!
+            </main>
         </div>
 
     )

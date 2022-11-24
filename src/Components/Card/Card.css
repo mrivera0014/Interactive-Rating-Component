@@ -13,3 +13,7 @@
 .active {
     background-color: #fb7413;
 }
+
+#thankYou {
+    display: none;
+}
